@@ -31,23 +31,32 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-                    <cloudHubDeployment>
+                    <cloudhub2Deployment>
+
+                        <!-- Anypoint URL -->
                         <uri>https://anypoint.mulesoft.com</uri>
-                        <muleVersion>${app.runtime}</muleVersion>
+
+                        <!-- CloudHub 2.0 Required -->
+                        <provider>MC</provider>
+                        <target>Cloudhub-US-East-1</target>
 
                         <!-- MUST BE UNIQUE -->
-                        <applicationName>my-demo</applicationName>
+                        <applicationName>my-demo-ajit-001</applicationName>
 
+                        <!-- Environment -->
                         <environment>Sandbox</environment>
-                        <workers>1</workers>
-                        <workerType>Micro</workerType>
-                        <region>us-east-1</region>
 
-                        <!-- Credentials from Jenkins -->
+                        <!-- Runtime -->
+                        <muleVersion>${app.runtime}</muleVersion>
+
+                        <!-- Scaling -->
+                        <replicas>1</replicas>
+
+                        <!-- Credentials (from Jenkins) -->
                         <username>${anypoint.username}</username>
                         <password>${anypoint.password}</password>
-                    </cloudHubDeployment>
-                </configuration>
+
+                    </cloudhub2Deployment>                </configuration>
 			</plugin>
 			<plugin>
 				<groupId>com.mulesoft.munit.tools</groupId>
