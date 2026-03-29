@@ -56,7 +56,12 @@
                         <username>${anypoint.username}</username>
                         <password>${anypoint.password}</password>
 
-                    </cloudhub2Deployment>                </configuration>
+                    </cloudhub2Deployment>                
+                    <exchangeDeployment>
+        <uri>https://anypoint.mulesoft.com</uri>
+        <apiVersion>v3</apiVersion>
+    </exchangeDeployment>
+                    </configuration>
 			</plugin>
 			<plugin>
 				<groupId>com.mulesoft.munit.tools</groupId>
