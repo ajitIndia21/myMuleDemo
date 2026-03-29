@@ -38,7 +38,7 @@
 
                         <!-- CloudHub 2.0 Required -->
                         <provider>MC</provider>
-                        <target>Cloudhub-US-East-1</target>
+                        <target>Cloudhub-US-East-2</target>
 
                         <!-- MUST BE UNIQUE -->
                         <applicationName>my-demo-ajit-001</applicationName>
